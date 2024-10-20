@@ -41,7 +41,7 @@ const PatientFile = () => {
   const [rowDataPayments, setRowDataPayments] = useState<Payments[] | null>(
     clickedPatient?.payments!
   )
-  const [colDefsExpenses, setColDefsExpenses] = useState<ColDef<Expense>[]>([
+  const [colDefsExpenses] = useState<ColDef<Expense>[]>([
     { headerName: 'Medicine name', field: 'name', flex: 2, filter: true },
     { headerName: 'Category', field: 'category' },
     { headerName: 'Date', field: 'dateApplied', filter: true },
@@ -49,7 +49,7 @@ const PatientFile = () => {
     { headerName: 'Quantity', field: 'quantity', filter: true },
     { headerName: 'Total Cost', valueGetter: (p) => Intl.NumberFormat('en-IN', { maximumFractionDigits: 3 }).format(p.data?.quantity! * p.data?.unitCost!) },
   ]);
-  const [colDefsPayments, setcolDefsPayments] = useState<ColDef<Payments>[]>([
+  const [colDefsPayments] = useState<ColDef<Payments>[]>([
     { headerName: 'Date', field: 'date', filter: true, flex: 2 },
     { headerName: 'Amount', field: 'amount', filter: true, flex: 2 }
   ])

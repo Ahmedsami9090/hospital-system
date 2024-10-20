@@ -17,7 +17,7 @@ const AllPatients = () => {
   const { userHospital } = useSelector((state: ReturnType<typeof reduxStore.getState>) => {
     return state.authSlice
   })
-  const [rowData, setRowData] = useState<Patient[]>(
+  const [rowData] = useState<Patient[]>(
     patients.filter((patient) => patient.hospitalName == userHospital)
   );
   const navigate = useNavigate()
@@ -25,7 +25,7 @@ const AllPatients = () => {
     console.log('clicked: ', data.name);
     navigate(`/app/patient-file/${data.nationalId}`)
   };
-  const [colDefs, setColDefs] = useState<ColDef<Patient>[]>([
+  const [colDefs] = useState<ColDef<Patient>[]>([
     { headerName: 'Name', field: "name", filter: true, flex: 2 },
     { headerName: 'Gender', field: "gender", filter: true },
     { headerName: 'ID number', field: "nationalId", filter: true },

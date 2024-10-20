@@ -1,8 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 import Layout from './components/Layout/Layout'
-import Patients from './components/Patients/Patients'
-import Finance from './components/Finance/Finance'
 import Dashboard from './components/Dashboard/Dashboard'
 import AllPatients from './components/AllPatients/AllPatients'
 import AddNew from './components/AddNewPatient/AddNewPatient'

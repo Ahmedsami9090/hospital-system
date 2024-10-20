@@ -1,4 +1,4 @@
-import { Expense, Patient, Payments } from "../interfaces/data.type";
+import { Patient } from "../interfaces/data.type";
 import { medications, disposables, laboratories } from "./expenses.data";
 import { hospitals, wardNames } from "./hospitals";
 const createRandomDate = ()=>{
